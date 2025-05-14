@@ -1,0 +1,23 @@
+/* src/pages/About.css */
+.CancellationNreturns-page {
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.CancellationNreturns-page h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.CancellationNreturns-page p1 {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.CancellationNreturns-page strong {
+  font-weight: bold;
+}

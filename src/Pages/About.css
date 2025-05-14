@@ -1,0 +1,22 @@
+/* src/pages/About.css */
+.about-page {
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-page h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-page p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.about-page strong {
+  font-weight: bold;
+}
