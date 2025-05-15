@@ -1,4 +1,6 @@
 import React from 'react';
+
+import ProductDetails from './Components/ProductDetails';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import Rings from './Pages/Rings';
@@ -8,7 +10,7 @@ import Bracelets from './Pages/Bracelets';
 import About from './Pages/About';
 import Faq from './Pages/Faq';
 import CancellationNreturns from './Pages/CancellationNreturns';
-
+import ProductSection from './Components/ProductSection/ProductSection';
 
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
            <Route path="/faq" element={<Faq />} />
             <Route path="/CancellationNreturns" element={<CancellationNreturns />} />
 
+          <Route path="/product/:id" element={<ProductDetails />} />
            
         {/* Add more routes here */}
       </Routes>

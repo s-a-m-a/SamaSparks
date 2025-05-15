@@ -3,26 +3,30 @@ import Header from '../Components/Header/Header';
 import Navbar from '../Components/Navbar/Navbar';
 import ProductSection from '../Components/ProductSection/ProductSection';
 import Footer from '../Components/Footer/Footer';
-import images from '../Components/Assets';
+import braceletProducts from '../Products/BraceletProducts'; // Import ringProducts here
+import { useNavigate } from 'react-router-dom';
 
 const Bracelets = () => {
-  const BraceletProducts = [
-    { name: 'Gold Ring 1', image: images.bracelets.bracelet1 },
-    { name: 'Gold Ring 2', image: images.bracelets.bracelet2 },
-    { name: 'Gold Ring 3', image: images.bracelets.bracelet3 },
-    { name: 'Gold Ring 4', image: images.bracelets.bracelet4 },
-    { name: 'Gold Ring 5', image: images.bracelets.bracelet5 },
-    { name: 'Gold Ring 6', image: images.bracelets.bracelet6 },
-  ];
+  const navigate = useNavigate();
+
+  const handleRingClick = (bracelet) => {
+    navigate(`/product/${bracelet.id}`); // ✅ redirect to product detail page
+  };
 
   return (
     <>
       <Header />
       <Navbar />
-      <ProductSection title="💍 All Rings" products={BraceletProducts} />
+      <ProductSection
+        title="💍 All Rings"
+        products={braceletProducts} // Pass the imported data here
+        onProductClick={handleRingClick} // ✅ pass the function
+      />
       <Footer />
     </>
   );
 };
 
 export default Bracelets;
+
+
